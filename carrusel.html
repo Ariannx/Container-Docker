@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Tarjetas 3D con HTML5 y CSS3 | FalconMasters.com</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="carrusel.css">
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $( document ).ready(function() {
+                $("#mostrar_fileupload_contrato").click(function(){
+                    $('#ArchivoContrato').toggle(1000,function() {
+
+                     });
+                 });
+            });
+        </script>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-primary" id='mostrar_fileupload_contrato'>Apple</button>
+          <button type="button" class="btn btn-primary" >Samsung</button>
+          <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        <div>
+      
+        </div>
+      </div>
+      
+      <div class="container1" id="ArchivoContrato">
+        
+            <ul class="slider">
+                <li id="slide1">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg"/>
+                </li>
+                <li id="slide2">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg"/>
+                </li>
+                <li id="slide3">
+                    <!-- <h1>Ejemplo con otros elementos</h1>
+                    <p>Esto es un párrafo de ejemplo para comprobar que podemos meter cualquier tipo de elementos en el slider</p> -->
+                    <a href="https://kikopalomares.com/">¡Corre a mi web para más contenido!</a>
+                </li>
+            </ul>
+        
+            <ul class="menu">
+                <li>
+                    <a href="#slide1">1</a>
+                </li>
+                <li>
+                    <a href="#slide2">2</a>
+                </li>
+                <li>
+                    <a href="#slide3">3</a>
+                </li>
+            </ul>
+        
+      </div>
+</body>
+</html>

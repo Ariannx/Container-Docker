@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Formulario</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+
+
+</head>
+
+<body id="body-formulario">
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="padding: 0px 50px">
+        <a class="navbar-brand" href="#">CBA</a>
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="logo" style="width:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Adopciones.html">Adopciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Adoptar</a>
+            </li>
+                  <li class="nav-item">
+              <a class="nav-link" href="miembros.html">Voluntarios</a>
+            </li>    
+          </ul>
+        </div>
+      </nav>
+
+  <!-- CABECERA VIDEO Y PALABRAS  -->
+  <header>
+	<div class="header-absolute">
+		<h1>Dale hogar a uno de nuestros peluditos!</h1>
+	</div>
+	<video onloadedmetadata="this.muted=true" autoplay loop>
+		<source src="dog.mp4">
+	</video>  
+</header>
+  
+
+  <!--    FORMULARIO    -->
+  	<div>
+		<form name ="formularioregistro" id="formularioregistro"  action="registrar.php" method="POST" class="formulario">
+			<h1>Formulario de Adopción</h1>
+			<div>
+			<h3>Datos Personales</h3>
+			<div>
+				<label for="names">Nombres*</label>
+				<input  type="text" id="names" class="obli" name="name">
+				<label >Apellidos*</label>
+				<input type="text"  id="ob3"  class="obli" name="apellidos">
+				<label >Celular*</label>
+				<input  type="tel"  id="ob4" class="obli" name="celular">
+			</div>
+			
+			<div>
+				<label class="ocupación">Ocupación</label>
+				<input type="text" name="ocupacion">
+				<label class="email">Email*</label>
+				<input id="ob5" class="obli" type="text" name="email" placeholder="usuario@correo.com">
+			</div>
+			<div>
+			</div>
+			<br>
+
+			<!-- REFERENCIAS -->
+			<div>
+			<h3>Referencias</h3>
+				<div>
+				<label class="rpersonal">Referencia Personal*</label>
+				<input class="obli"  type="texto" name="rpname"  >
+				<label class=rptelefono>Teléfono*</label>
+				<input class="obli"  type="tel" name="rpcelular"  >
+				<label class=rprelación>Relación*</label>
+				<input  class="obli"  type="text" name="rprelacion"  placeholder="comercial/laboral/amistad">
+				</div>
+				<div>
+				<label class="rfamiliar">Referencia Familiar*</label>
+				<input  class="obli"  type="texto" name="rfname"  >
+				<label class=rftelefono>Teléfono*</label>
+				<input class="obli"  type="tel" name="rfcelular"  >
+				<label class=rfrelación>Relación*</label>
+				<input class="obli" type="text" name="rfrelacion"  >
+				</div>
+			</div>
+			<br>
+
+			<!-- SITUACIÓN PERSONAL -->
+			<!-- <div class="situacionpersonal">
+				<h3>Situación Personal</h3>
+				<h5>Menciona a las personas con las que vive: </h5>
+				<button type="button" id="agregar">Agregar campos</button>
+				<button type="button" id="remove">Eliminar campos</button>
+				<table id="tabla" border="1">
+				<tr>
+					<td><label class="spnombres">Nombres</label></td>
+					<td><label class="spedad">Edad</label></td>
+					<td><label class="spparentesco">Parentesco</label></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="spname"></td>
+					<td><input type="number" name="spedad"></td>
+					<td> <input  type="text" name="spparentesco">  </td>
+				</tr>
+				</table>
+			</div>   
+			<div class="familiarbebe">
+				<label class="spbebe">Algún familiar espera un bebé?*</label>
+				<input class="obli"  type="radio" name="spbebeo" value="s">Sí
+				<input  class="obli"  type="radio" name="spbebeo" value="n">No
+				<br>
+			</div>
+			<div>
+				<label class="spalergia">En su hogar, alguien tiene alergia a los animales?*</label>
+				<input class="obli" type="radio" name="spalergiao" value="s">Sí
+				<input class="obli"   type="radio" name="spalergiao" value="n">No
+			</div>
+			<br>
+ -->
+			<!-- DOMICILIO ESPECIFICACIONES -->
+			<div>
+				<h3>Domicilio</h3>
+				<div>
+					<label class="direccion">Dirección Domiciliaria*</label>
+					<input  class="obli"  type="text" name="direccion"  >
+					
+					<label class="province">Provincia*</label>
+					<input  class="obli"  type="text" name="provincia"  >
+					<label class="city">Ciudad*</label>
+					<input  class="obli"  type="text" name="ciudad">  
+				</div>
+				<label class="inmueble">Qué tipo de inmueble posee? *</label>
+				<input class="obli"  type="text" name="inmueble" placeholder="casa/apartamento/villa"  >
+				<br>
+				<div class="domiciliopropio">
+					<label class="propio">Es propio?*</label>
+					<input class="obli"  type="radio" name="propio" value="s">Sí
+					<input  class="obli"  type="radio" name="propio" value="n"  >No
+					<br>
+				</div>
+				<div class="domiciliomudarse">
+					<label class="mudar">Planea Mudarse Próximamente?*</label>
+					<input class="obli"  type="radio" name="mudar" value="s"  >Sí
+					<input class="obli"  type="radio" name="mudar" value="n"  >No
+					<br>
+				</div>
+				<h5>En caso de que sea arrendado, indíquenos lo siguiente: </h5>
+				<label class="arriendo">Nombe del propietario</label>
+				<input type="text" name="name_arriendo">
+				<label class="arriendo-tel">Teléfono</label>
+				<input type="tel" name="tel_arriendo">
+			</div>
+	<!-- 			<button type="button" id="btnSend">Enviar Formulario de Adopción</button> -->
+				<input type="button" value="Enviar Mensaje" id="btnSend">
+			</form>
+	</div>
+	<br>
+	<!-- REDES SOCIALES Y FOOTER -->
+    <div class="contenedor-cba-rs">
+		
+		<div class="contenedor-cba-rs">
+			
+			<div class="icon contenedor-cba-rs">
+				<a href="https://www.facebook.com/clubbienestaranimal"><i class="fa fa-facebook-f fa-2x"></i></a>
+			</div>
+			<div class="icon contenedor-cba-rs">
+				<a href="#"><i class="fa fa-twitter twitter fa-2x"></i></a>
+			</div>
+			<div class="icon contenedor-cba-rs">
+				<a href="https://www.instagram.com/clubbienestaranimal/"><i class="fa fa-instagram instagram fa-2x"></i></a>
+			</div>
+			<div class="icon contenedor-cba-rs">
+				<a href="#"><i class="fa fa-whatsapp whatsapp fa-2x"></i></a>
+			</div>
+		</div>
+   		<div class="footer">
+			<p>
+				Copyright &copy; 2021 All rights reserved  Club de Bienestar Animal YT | Made by Arianna Armijos
+			</p>
+			
+		</div>
+		
+		
+	</div>
+
+	<!-- SCRIPT AÑADIR Y ELIMINAR FAMILIARES -->
+	<script>
+		$("document").ready(function () {
+		$("#agregar").click(function () {
+			agregar();
+		})
+		$("#remove").click(function () {
+			remover();
+		})
+		})
+
+		function agregar() {
+			$('#tabla').append('<tr id="new_file"><td><input type="text"><td><input type="number"><td><input type="text"><tr>');
+		}
+		function remover() {
+			$("#new_file").remove();
+			
+		}
+	</script>
+
+</body>

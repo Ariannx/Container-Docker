@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.CBA-tittle {
+  text-align: center;
+}
+
+.CBA-header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.CBA-header-top {
+  display: flex;
+  padding: 25px 74px 0 70px;
+  position: relative;
+  z-index: 100;
+}
+
+.CBA-logo {
+  width: 8.4rem;
+  height: 8.4rem;
+  text-align: center;
+}
+
+.CBA-logo-final {
+  width: 80%;
+}
+
+.CBA-nav {
+  margin-left: auto;
+  position: relative;
+  align-self: center;
+}
+
+.CBA-nav .nav-link {
+  color: coral;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  font-family: "Oxygen", sans-serif;
+  /* font-weight: 700; */
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+}
+
+.CBA-frase {
+  padding-bottom: 50px;
+  width: 44%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+  padding-top: 50px;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contenedor_tarjeta {
+  margin: 20px;
+}
+
+.contenedor_tarjeta a {
+  display: inline-block;
+}
+.contenedor_tarjeta:hover figure {
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+}
+figure {
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  transition: all ease 0.5s;
+  transform-style: preserve-3d;
+  /* Nota:
+          Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+          ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+      */
+  transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+
+figure .frontal {
+  display: block;
+  background: #000;
+
+  /* Podemos ocultar la imagen al da la vuelta si lo queremos */
+  /*backface-visibility: hidden;*/
+}
+
+figure .trasera {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #fff;
+  transform: perspective(600px) rotateY(180deg);
+  /*  backface-visibility: hidden;
+  overflow: auto; */
+}
+
+/* figure {
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  transition: all ease 0.5s;
+  transform-style: preserve-3d;
+  transform: perspective(600px) rotateY(0deg);
+}
+
+figure .CBA-melcocha-frontal,
+figure .CBA-melcocha-trasera {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+
+figure .CBA-melcocha-frontal {
+  display: block;
+  background: #000;
+  /*  backface-visibility: hidden; */
+/* } */
+
+/* figure .CBA-melcocha-trasera {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #fff;
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: hidden;
+  overflow: auto;
+} */
+
+/* .CBA-background {
+  background-image: url(Portada-CBA.png);
+  background-size: cover;
+  height: 80%;
+  width: 100%;
+  text-align: center;
+}
+
+h1.CBA-title-cabezera {
+  color: orangered;
+  font-family: jokerman;
+  flex: 10px;
+  display: inline-block;
+}
+
+.CBA-dog-cabezera {
+  vertical-align: middle;
+  position: absolute;
+}
+
+.CBA-cat-cabezera {
+  vertical-align: middle;
+  transform: scaleX(-1);
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+}
+
+.contenedor {
+  background-image: url(Portada-CBA.png);
+  background-size: cover;
+  height: 80%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+ */
