@@ -13,7 +13,7 @@ Clone this repository on your local computer. Run the `docker-compose up`.
 
 ```shell
 git clone https://github.com/Ariannx/Container-Docker.git
-cd docker-compose-wamp/
+cd Container-Docker/
 git fetch --all
 docker-compose up
 ```
